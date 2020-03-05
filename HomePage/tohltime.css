@@ -1,0 +1,316 @@
+* {box-sizing: border-box} /* makes nav bar be on one line */
+
+.header {
+  position: relative;
+  text-align: center;
+}
+
+body{
+  margin: 0;
+  background-color: grey;
+}
+
+/* Header image/video and Text */
+.logoText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subLogoText {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+}
+
+#logoBackground{
+  opacity: .8;
+}
+
+#logo{
+  animation: fill ease 0.5s forwards 4.5s;
+}
+
+#logo path:nth-child(1){
+  stroke-dasharray: 337;
+  stroke-dashoffset: 337;
+  animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2){
+  stroke-dasharray: 566;
+  stroke-dashoffset: 566;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3){
+  stroke-dasharray: 535;
+  stroke-dashoffset: 535;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4){
+  stroke-dasharray: 298;
+  stroke-dashoffset: 298;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#logo path:nth-child(5){
+  stroke-dasharray: 337;
+  stroke-dashoffset: 337;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6){
+  stroke-dasharray: 227;
+  stroke-dashoffset: 227;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#logo path:nth-child(7){
+  stroke-dasharray: 755;
+  stroke-dashoffset: 755;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+#logo path:nth-child(8){
+  stroke-dasharray: 464;
+  stroke-dashoffset: 464;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+#logo path:nth-child(9){
+  stroke-dasharray: 755;
+  stroke-dashoffset: 755;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#logo path:nth-child(10){
+  stroke-dasharray: 464;
+  stroke-dashoffset: 464;
+  animation: line-anim 2s ease forwards 2.7s;
+}
+#logo path:nth-child(11){
+  stroke-dasharray: 572;
+  stroke-dashoffset: 572;
+  animation: line-anim 2s ease forwards 3.0s;
+}
+#logo path:nth-child(12){
+  stroke-dasharray: 227;
+  stroke-dashoffset: 227;
+  animation: line-anim 2s ease forwards 3.3s;
+}
+#logo path:nth-child(13){
+  stroke-dasharray: 491;
+  stroke-dashoffset: 491;
+  animation: line-anim 2s ease forwards 3.6s;
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: white;
+  }
+}
+/* end header image/video and Text */
+
+/* nav bar */
+#navbar {
+  position: sticky;
+  overflow: hidden;
+}
+
+#navbar a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Five links of equal widths */
+  text-align: center;
+  padding: 30px 15px 30px 15px;
+  background-color: black;
+  color: white;
+  border-right:1px solid #bbb;
+  display: block;
+}
+
+#navbar a:hover {
+  background-color: #8e918f;
+  color:black;
+}
+
+#navbar a.active {
+  background-color: #c7c9c8;
+  color: black;
+}
+
+#navbar a:hover.active {
+  color: white;
+}
+
+#navbar a:last-child {
+  border-right:none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* end of nav bar */
+
+
+/* main content of page */
+.content{
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 16px;
+}
+
+/* ALL PARALLAX SCROLLING CSS */
+.weddingParallax {
+  /* The image used */
+  background-image: url('images/wedding_parallax.jpg');
+
+  /* Full height */
+  height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weddingLabel {
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: white;
+}
+
+.promoParallax {
+  /* The image used */
+  background-image: url('images/promo_parallax.jpg');
+
+  /* Full height */
+  height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promoLabel {
+  position: absolute;
+  top: 245%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: white;
+}
+
+.portraitParallax {
+  /* The image used */
+  background-image: url('images/portrait_parallax.jpg');
+
+  /* Full height */
+  height: 600px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portraitLabel {
+  position: absolute;
+  top: 350%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: white;
+}
+/* end of parallax css */
+
+/* form div */
+.form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+#formHeader{
+  text-align: center;
+}
+
+/* contact form */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* submit button on form */
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* submit button on form when hovered */
+input[type=submit]:hover {
+  background-color: grey;
+  color: black;
+}
+/* end of contact form */
+
+/* footer */
+.footer{
+  clear:both;
+  text-align: center;
+  padding: 1.5em;
+  color: white;
+  background-color:black;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#insta{
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  float: right;
+}
+/* end of footer */
+
+
+
+/* ALL MOBILE DEVICE CSS */
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
